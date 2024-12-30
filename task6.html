@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="task6.css">
+</head>
+<body>
+  <header>
+    <h1>Kanban Board</h1>
+  </header>
+  <main>
+    <div class="kanban-board">
+      <!-- Columns -->
+      <div class="column" data-status="todo">
+        <h2>To Do</h2>
+        <div class="card-container" id="todo"></div>
+        <form class="add-card-form" onsubmit="addCard(event, 'todo')">
+          <input type="text" placeholder="Title" name="title" required>
+          <select name="priority" required>
+            <option value="" disabled selected>Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button type="submit">Add Card</button>
+        </form>
+      </div>
+      <div class="column" data-status="in-progress">
+        <h2>In Progress</h2>
+        <div class="card-container" id="in-progress"></div>
+        <form class="add-card-form" onsubmit="addCard(event, 'in-progress')">
+          <input type="text" placeholder="Title" name="title" required>
+          <select name="priority" required>
+            <option value="" disabled selected>Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button type="submit">Add Card</button>
+        </form>
+      </div>
+      <div class="column" data-status="done">
+        <h2>Done</h2>
+        <div class="card-container" id="done"></div>
+        <form class="add-card-form" onsubmit="addCard(event, 'done')">
+          <input type="text" placeholder="Title" name="title" required>
+          <select name="priority" required>
+            <option value="" disabled selected>Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button type="submit">Add Card</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="task6.js"></script>
+</body>
+</html>
